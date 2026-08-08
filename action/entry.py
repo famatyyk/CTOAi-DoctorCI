@@ -16,18 +16,21 @@ import tempfile
 
 
 def install_doctor():
-    """Pobierz CTOAi-Project-Doctor jako paczke (git clone + pip install -e).
+    """Pobierz CTOAi-Project-Doctor jako paczke (git+https z GitHub).
     Pomijane gdy CTOAi_DOCTOR_SKIP_INSTALL=1 (dev/test z lokalnym clone)."""
     if os.environ.get("CTOAi_DOCTOR_SKIP_INSTALL") == "1":
         print("Instalacja pominieta (CTOAi_DOCTOR_SKIP_INSTALL=1)")
         return None
-    tmp = tempfile.mkdtemp(prefix="doctor_")
-    url = "https://github.com/famatyyk/CTOAi-Project-Doctor.git"
-    subprocess.run(["git", "clone", "--depth", "1", url, tmp],
-                   check=True, capture_output=True)
-    subprocess.run([sys.executable, "-m", "pip", "install", "-e", tmp, "-q"],
-                   check=True, capture_output=True)
-    return tmp
+    url = "git+https://github.com/famatyyk/CTOAi-Project-Doctor.git"
+    print(f"Instalacja CTOAi-Project-Doctor z {url}")
+    r = subprocess.run([sys.executable, "-m", "pip", "install", "--no-cache-dir", url],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        print("!!! PIP INSTALL FAILED !!!")
+        print(r.stdout[-1500:])
+        print(r.stderr[-1500:])
+        raise RuntimeError("nie udalo sie zainstalowac Project Doctor")
+    print("Project Doctor zainstalowany:", r.stdout[-200:].strip())
 
 
 def run_audit(target_dir: str) -> dict:
