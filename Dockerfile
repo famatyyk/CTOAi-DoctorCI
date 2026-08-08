@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /
 
 WORKDIR /action
 COPY action/entry.py /action/entry.py
-COPY requirements.txt /action/requirements.txt
 
 ENV PYTHONUNBUFFERED=1
 ENTRYPOINT ["python", "/action/entry.py"]
