@@ -1,5 +1,9 @@
 # CTOAi Doctor CI
 
+[![Doctor CI](https://github.com/famatyyk/CTOAi-DoctorCI/actions/workflows/doctor.yml/badge.svg)](https://github.com/famatyyk/CTOAi-DoctorCI/actions)
+[![Security: read-only](https://img.shields.io/badge/security-read--only-5e6ad2)](https://github.com/famatyyk/CTOAi-DoctorCI)
+[![Listed on SkillsLLM](https://img.shields.io/badge/SkillsLLM-submit%20ready-5e6ad2)](https://skillsllm.com/submit)
+
 GitHub Action: statyczny audyt C++ / Lua / Python na każdym PR.
 
 ## Co robi
