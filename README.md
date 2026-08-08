@@ -6,6 +6,9 @@
 
 GitHub Action: statyczny audyt C++ / Lua / Python na każdym PR.
 
+## Preview (CTOAi ecosystem landing)
+![CTOAi ecosystem landing](landing_preview.png)
+
 ## Co robi
 - Instaluje [CTOAi-Project-Doctor](https://github.com/famatyyk/CTOAi-Project-Doctor)
 - Analizuje repozytorium (read-only, bez modyfikacji)
