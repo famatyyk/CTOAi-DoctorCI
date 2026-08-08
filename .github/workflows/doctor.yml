@@ -1,0 +1,17 @@
+name: Doctor CI (beta)
+
+on:
+  pull_request:
+  push:
+    branches: [beta-ci]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: CTOAi Doctor CI
+        uses: ./   # lokalna akcja (entry.py + Dockerfile)
+        with:
+          target: "."
+          fail_on_high: "0"
