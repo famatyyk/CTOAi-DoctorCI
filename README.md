@@ -40,3 +40,10 @@ jobs:
 ## Cena
 Subskrypcja CI: **29 € / mies.** (w ramach ekosystemu CTOAi Tools).
 Więcej: https://ctoai-funnel.fly.dev/
+
+
+## Free Tool & Pro Version
+
+Start free: **[CTOAi-Lint](https://github.com/famatyyk/CTOAi-Lint)** — `pip install git+https://github.com/famatyyk/CTOAi-Lint` (C++/Lua/Python static linter, zero deps).
+
+Need a full audit (C++, Lua, Python, JS, TS, CMake, GitHub Action CI)? → **[CTOAi Funnel](https://ctoai-funnel.fly.dev/)**
