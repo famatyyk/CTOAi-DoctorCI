@@ -1,0 +1,3 @@
+# CTOAi-Project-Doctor pobierany z GitHub w entry.py (git clone).
+# Tutaj tylko podstawowe zaleznosci runtime, jesli Doctor ich potrzebuje.
+PyYAML>=6.0

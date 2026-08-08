@@ -1,0 +1,20 @@
+name: "CTOAi Doctor CI"
+description: "Statyczny audyt C++/Lua/Python na kazdym PR — wykrywa ryzyka (strcpy, load, os.execute) i liczy Project Health."
+author: "famatyyk"
+branding:
+  icon: "check-circle"
+  color: "purple"
+
+inputs:
+  target:
+    description: "Sciezka do analizowanego kodu (domyslnie cale repo)."
+    required: false
+    default: "."
+  fail_on_high:
+    description: "Jesli 1, akcja zwraca blad gdy wykryje problemy wysokiego ryzyka."
+    required: false
+    default: "0"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
